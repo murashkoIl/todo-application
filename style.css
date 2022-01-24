@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:500,600,700&display=swap');
+
+input::-ms-clear{display:none;}
+input {
+    font-family: inherit;
+    border: 0;
+    outline: none;
+}
+
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: #000;
+    font-family: 'Work Sans';
+    font-weight: 500;
+}
+
+.wrapper {
+}
+
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+.header {
+    padding: 0.938em;
+}
+
+.header__title {
+    font-size: 4.5em;
+    background: -webkit-linear-gradient(#eeaeca, #94bbe9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__text {
+    background: -webkit-linear-gradient(#eeaeca, #94bbe9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1em;
+}
+
+
+.main {
+    padding: 2em 0.938em;
+}
+
+.content {
+    
+}
+
+.content__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item-content__checkbox  {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.input-field-content{
+    display: flex;
+    margin-bottom: 1.563em;
+}
+
+.input-field-content__text {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0 0.938em 0 0; 
+}
+
+
+.input-field-content__input {
+    flex: 1 1 auto;
+    padding: 0.6em;
+    font-size: 1rem;
+    background: -webkit-linear-gradient(#eeaeca, #94bbe9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 5px;
+    border: 1.5px solid #94bbe9;
+    border-image: linear-gradient(to right top, #eeaeca, #94bbe9, #eeaeca);
+    border-image-slice: 1;
+    color: seashell;
+    background-color: #000;
+}
+
+
+.input-field-content__add {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#eeaeca, #94bbe9);
+    min-height: 1rem;
+    width: 6rem;
+    overflow: hidden;
+    border: 2px solid #94bbe9;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+}
+
+
+.input-field-content__add:hover{
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+    border: 2px solid #eeaeca;
+}
+
+.todos-wrapper {
+    transition: all 0.5s ease 0s;
+}
+
+.item-todos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em;
+    
+}
+
+.item-todos.checked {
+    text-decoration: line-through;
+    color: whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+
+.item-todos.checked .item-todos__text {
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+}
+
+.item-todos.animation {
+    animation: opacity 1s ease;
+}
+
+.item-todos__checkbox {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.item-todos__text {
+    flex: 1 1 auto;
+    background: -webkit-linear-gradient(#eeaeca, #94bbe9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 1rem;
+}
+
+.item-todos__delete {
+    display: block;
+    background: url('../todo/icons/trash-white.svg') 0 0 no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    margin-right: 0.6em;
+    transition: all 0.3s ease 0s;
+}
+
+.item-todos__delete:hover{
+    background: url('../todo/icons/trash-black.svg') 0 0 no-repeat;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.item-todos.reverse-animation .item-todos__text {
+    animation: reverse-opacity 1s ease;
+}
+
+.item-todos .item-todos__checkbox {
+    position: relative;
+    display: block;
+    background: #000;
+    border: 1px solid #fff;
+    width: 22px;
+    height: 21px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.item-todos.checked .item-todos__checkbox:before {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    left: 3px;
+    top: 3px;
+    background: url('../todo/icons/checked.svg') 0 0 no-repeat; 
+}
+
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes reverse-opacity {
+    from {
+        opacity: 0.5;
+        text-decoration: line-through;
+    }
+    to {
+        opacity: 1;
+        text-decoration: none;
+    }
+}
+
+@keyframes backgroundAnimation {
+    from {
+        background: #000;
+    }
+    to {
+        background: url('../todo/icons/checked.svg') 0 0 no-repeat;
+    }
+}
+
+@media (max-width: 380px) {
+    .header__text {
+        display: none;
+    }
+}
