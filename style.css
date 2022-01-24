@@ -158,7 +158,7 @@ body {
 
 .item-todos__delete {
     display: block;
-    background: url("icons/trash-white.svg") 0 0 no-repeat;
+    background: url("./icons/trash-white.svg") 0 0 no-repeat;
     width: 1.5rem;
     height: 1.5rem;
     border: 0;
@@ -167,7 +167,7 @@ body {
 }
 
 .item-todos__delete:hover{
-    background: url("icons/trash-black.svg") 0 0 no-repeat;
+    background: url("./icons/trash-black.svg") 0 0 no-repeat;
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
@@ -194,7 +194,7 @@ body {
     height: 1em;
     left: 3px;
     top: 3px;
-    background: url("icons/checked.svg") 0 0 no-repeat; 
+    background: url("./icons/checked.svg") 0 0 no-repeat; 
 }
 
 
@@ -223,7 +223,7 @@ body {
         background: #000;
     }
     to {
-        background: url("icons/checked.svg") 0 0 no-repeat;
+        background: url("./icons/checked.svg") 0 0 no-repeat;
     }
 }
 
