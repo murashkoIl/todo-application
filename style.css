@@ -154,20 +154,23 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 1rem;
+    line-height: 1.5em;
+    overflow-wrap: break-word;
 }
 
 .item-todos__delete {
     display: block;
-    background: url(icons/trash-white.svg) 0 0 no-repeat;
-    width: 1.5rem;
-    height: 1.5rem;
+    background: url("icons/trash-white.svg") 0 0 no-repeat;
+    min-height: 24px;
+    min-width: 31.5px;
+    
     border: 0;
     margin-right: 0.6em;
     transition: all 0.3s ease 0s;
 }
 
 .item-todos__delete:hover{
-    background: url(icons/trash-black.svg) 0 0 no-repeat;
+    background: url("icons/trash-black.svg") 0 0 no-repeat;
     cursor: pointer;
     transition: all 0.5s ease 0s;
 }
@@ -194,7 +197,7 @@ body {
     height: 1em;
     left: 3px;
     top: 3px;
-    background: url(icons/checked.svg) 0 0 no-repeat; 
+    background: url("icons/checked.svg") 0 0 no-repeat; 
 }
 
 
@@ -223,7 +226,7 @@ body {
         background: #000;
     }
     to {
-        background: url(icons/checked.svg) 0 0 no-repeat;
+        background: url("icons/checked.svg") 0 0 no-repeat;
     }
 }
 
